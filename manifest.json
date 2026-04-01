@@ -1,0 +1,12 @@
+{
+  "name": "Japan Housing Troubleshooter",
+  "short_name": "Housing Help",
+  "description": "Check if your Japan move-out charges are fair based on MLIT guidelines",
+  "start_url": "/japan-housing-help/",
+  "display": "standalone",
+  "background_color": "#FAFAFA",
+  "theme_color": "#2563EB",
+  "icons": [
+    { "src": "images/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

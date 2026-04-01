@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://humancronadmin.github.io/japan-housing-help/sitemap.xml

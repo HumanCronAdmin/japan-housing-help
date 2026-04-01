@@ -1,0 +1,190 @@
+{
+  "costData": {
+    "cleaning": {
+      "label": "Professional Cleaning",
+      "tenant": true,
+      "depreciationYears": 0,
+      "ranges": {
+        "1r1k": { "min": 25000, "max": 35000, "label": "1R/1K (20-25sqm)" },
+        "1ldk": { "min": 35000, "max": 50000, "label": "1LDK (30-40sqm)" },
+        "2ldk": { "min": 50000, "max": 70000, "label": "2LDK (50-60sqm)" },
+        "3ldk": { "min": 70000, "max": 100000, "label": "3LDK+ (70sqm+)" }
+      },
+      "note": "Standard clause in most contracts. Usually tenant responsibility."
+    },
+    "wallpaper": {
+      "label": "Wallpaper Replacement",
+      "tenant": false,
+      "depreciationYears": 6,
+      "residualRate": 0.3,
+      "perUnit": "sqm",
+      "range": { "min": 1000, "max": 1500 },
+      "note": "Tenant pays only if damage beyond normal wear. After 6 years, only labor cost (approx 30%)."
+    },
+    "tatami": {
+      "label": "Tatami Surface Replacement",
+      "tenant": true,
+      "depreciationYears": 0,
+      "perUnit": "mat",
+      "range": { "min": 8000, "max": 15000 },
+      "note": "Consumable item. Often tenant responsibility regardless of wear."
+    },
+    "flooring": {
+      "label": "Flooring Scratch Repair",
+      "tenant": false,
+      "depreciationYears": 6,
+      "residualRate": 0.3,
+      "perUnit": "room",
+      "range": { "min": 8000, "max": 30000 },
+      "note": "Tenant pays only if negligence. 6-year depreciation for wood flooring."
+    },
+    "ac": {
+      "label": "AC Cleaning",
+      "tenant": false,
+      "depreciationYears": 0,
+      "range": { "min": 10000, "max": 20000 },
+      "note": "Tenant pays only if heavy damage or mold from neglect."
+    },
+    "lock": {
+      "label": "Lock Cylinder Replacement",
+      "tenant": false,
+      "landlordResponsible": true,
+      "range": { "min": 10000, "max": 25000 },
+      "note": "MLIT guideline: Landlord responsibility. You should NOT be charged for this."
+    },
+    "nails": {
+      "label": "Small Nail/Pin Holes",
+      "tenant": false,
+      "landlordResponsible": true,
+      "range": { "min": 0, "max": 0 },
+      "note": "MLIT guideline: Normal wear from daily living. Landlord responsibility."
+    },
+    "sunfading": {
+      "label": "Sun Fading (Walls/Floor)",
+      "tenant": false,
+      "landlordResponsible": true,
+      "range": { "min": 0, "max": 0 },
+      "note": "Natural deterioration. Landlord responsibility per MLIT."
+    }
+  },
+  "disputeTemplates": [
+    {
+      "id": "breakdown",
+      "title": "Request Itemized Breakdown",
+      "en": "Dear [Management Company],\n\nI recently received a move-out cost estimate of [amount] yen. Could you please provide an itemized breakdown showing each repair item, the cost, and the reason I am being charged?\n\nI would also like to know which items fall under normal wear and tear as defined by the MLIT Restoration Guidelines.\n\nThank you.",
+      "jp": "[Management Company] sama\n\nTaikyohiyou toshite [amount] en no omitsumori wo itadakimashita. Kaku shuuzen koumoku no uchiwake (koumoku-mei / kingaku / seikyuu riyuu) wo shomen de goteiji itadakemasu ka.\n\nMata, Kokudo Koutsuushou no genjou kaifuku guideline ni okeru tsuujou sonmou ni gaitou suru koumoku ni tsuite mo gokakunin wo onegai itashimasu."
+    },
+    {
+      "id": "dispute",
+      "title": "Dispute Specific Charge",
+      "en": "Dear [Management Company],\n\nRegarding the move-out cost estimate dated [date], I would like to dispute the charge for [item] ([amount] yen).\n\nAccording to the MLIT Guidelines on Restoration to Original Condition, [specific rule - e.g., 'small nail holes from normal living are considered normal wear and the landlord's responsibility'].\n\nI request this charge be removed or adjusted accordingly.",
+      "jp": "[Management Company] sama\n\n[date] tsuki no taikyohiyou mitsumori no uchi, [item] ([amount] en) ni tsuite igi wo moushitatemasu.\n\nKokudo Koutsuushou 'Genjou Kaifuku wo Meguru Trouble to Guideline' ni yoreba, [specific rule] to sarete imasu.\n\nHon koumoku no torisage matawa tekisei na kingaku e no shuusei wo onegai itashimasu."
+    },
+    {
+      "id": "escalate",
+      "title": "Escalation to Consumer Affairs",
+      "en": "Dear [Management Company],\n\nI have previously requested [adjustment/breakdown] regarding my move-out charges but have not received a satisfactory response.\n\nI am now consulting with the Consumer Affairs Center (188) regarding this matter. I would appreciate your prompt attention to resolve this before formal mediation becomes necessary.",
+      "jp": "[Management Company] sama\n\nTaikyohiyou ni tsuite [adjustment/breakdown] wo onegai shimashita ga, juubun na gokaitou wo itadakete orimasen.\n\nHonken ni tsuite Shouhi Seikatsu Center (188) ni soudan wo kaishi itashimashita. Seishiki na chouteini itaru mae ni kaiketsu itadakemasu you onegai moushiagemasu."
+    }
+  ],
+  "helpContacts": [
+    {
+      "level": 1,
+      "title": "Self-Negotiate",
+      "description": "Use our dispute templates and reference the MLIT guideline PDF.",
+      "action": "Scroll to Dispute Templates above",
+      "icon": "1"
+    },
+    {
+      "level": 2,
+      "title": "Consumer Affairs Center",
+      "description": "Free government mediation between tenant and landlord.",
+      "phone": "188",
+      "hours": "Weekdays 10:00-16:00 (Japanese only)",
+      "note": "Can also search your local consumer center by city",
+      "icon": "2"
+    },
+    {
+      "level": 3,
+      "title": "Houterasu (Japan Legal Support Center)",
+      "description": "Free initial legal consultation for eligible residents.",
+      "phone": "0570-078377",
+      "hours": "Limited English hours - ask for multilingual service",
+      "url": "https://www.houterasu.or.jp/en/",
+      "icon": "3"
+    },
+    {
+      "level": 4,
+      "title": "Lawyer",
+      "description": "Japan Federation of Bar Associations foreign consultation.",
+      "phone": "03-3581-2201 (Tokyo Bar Association)",
+      "cost": "Initial consultation: 5,000-10,000 yen / 30 min",
+      "icon": "4"
+    }
+  ],
+  "photoChecklist": [
+    {
+      "room": "Every Room",
+      "items": [
+        "Walls (all four + ceiling): stains, cracks, nail holes",
+        "Floors: scratches, dents, discoloration",
+        "Windows: cracks, frame condition, screen condition",
+        "Light fixtures: working, any damage"
+      ]
+    },
+    {
+      "room": "Kitchen",
+      "items": [
+        "Sink: stains, scratches, drainage",
+        "Stove area: grease, burns",
+        "Cabinets: door condition, shelves"
+      ]
+    },
+    {
+      "room": "Bathroom / Toilet",
+      "items": [
+        "Tiles: cracks, mold, grout condition",
+        "Fixtures: faucets, showerhead, toilet seat",
+        "Ventilation fan: working, mold"
+      ]
+    },
+    {
+      "room": "Entrance / Balcony",
+      "items": [
+        "Door: scratches, lock function",
+        "Shoe box: condition",
+        "Balcony: floor, railing, drain"
+      ]
+    }
+  ],
+  "faqData": [
+    {
+      "q": "Is the MLIT guideline legally binding?",
+      "a": "The MLIT guideline is not law, but it is the most widely referenced standard by courts and consumer affairs centers. Most disputes are resolved in the tenant's favor when referencing this guideline. However, your lease may include 'special clauses' that override some provisions - check your contract."
+    },
+    {
+      "q": "My landlord says I signed a special clause. Am I stuck?",
+      "a": "Not necessarily. For a special clause to be valid, the Supreme Court requires: (1) the tenant clearly understood the clause, (2) the tenant's intent was confirmed, and (3) the clause is not excessively burdensome. If the clause was buried in fine print or never explained, it may be challengeable."
+    },
+    {
+      "q": "How long do I have to dispute move-out charges?",
+      "a": "There is no strict deadline, but act quickly - ideally within 2-4 weeks of receiving the estimate. The longer you wait, the harder it becomes. If deductions are taken from your deposit, you can still dispute within the statute of limitations (5 years for civil claims)."
+    },
+    {
+      "q": "What counts as 'normal wear and tear'?",
+      "a": "Per MLIT guidelines: sun fading, small pin/nail holes, furniture indentations on carpet, slight wall discoloration from appliances, and general aging of materials. These are all landlord responsibility. Tenant-caused damage includes cigarette burns, pet scratches, large holes, and water damage from neglect."
+    },
+    {
+      "q": "Can I refuse to pay until the dispute is resolved?",
+      "a": "If the charges are deducted from your deposit, you may need to pursue a refund. If you receive a separate bill, you can negotiate before paying. Never ignore bills entirely - communicate in writing (email) and keep records. Consider consulting Consumer Affairs (188) before refusing payment."
+    },
+    {
+      "q": "I already paid. Can I get money back?",
+      "a": "Yes. If you overpaid based on MLIT guidelines, you can request a refund. Start with Template A (request breakdown), then escalate. Small claims court handles disputes up to 600,000 yen in a single hearing - it is designed to be accessible without a lawyer."
+    },
+    {
+      "q": "Does this tool work for all of Japan?",
+      "a": "The MLIT guidelines are national. Cost ranges shown are based on Tokyo-area market rates and may vary by region. Rural areas tend to be cheaper; central Tokyo can be higher. The dispute process and tenant rights apply nationwide."
+    }
+  ]
+}
