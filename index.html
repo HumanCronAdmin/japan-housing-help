@@ -155,5 +155,11 @@
 </main>
 
 <script src="js/main.js"></script>
+
+<!-- feedback-prompt-start -->
+<style>#fb-prompt{position:fixed;bottom:0;left:0;right:0;background:#1a1a2e;color:#fff;padding:12px 20px;display:none;align-items:center;justify-content:center;gap:12px;font-size:14px;z-index:9999;box-shadow:0 -2px 8px rgba(0,0,0,.2);font-family:system-ui,sans-serif}#fb-prompt button{border:none;padding:6px 16px;border-radius:16px;cursor:pointer;font-size:13px}#fb-yes{background:#4CAF50;color:#fff}#fb-no{background:#ff5252;color:#fff}#fb-close{background:none;color:#aaa;font-size:18px;padding:2px 8px}#fb-msg{color:#ccc;font-size:13px}#fb-msg a{color:#64b5f6;text-decoration:underline}</style>
+<div id="fb-prompt"><span id="fb-q">Was this helpful?</span><span id="fb-msg" style="display:none"></span><button id="fb-yes" onclick="fbYes()">Yes</button><button id="fb-no" onclick="fbNo()">Not really</button><button id="fb-close" onclick="fbDismiss()">&times;</button></div>
+<script>!function(){var k='fb_'+location.pathname;if(localStorage.getItem(k))return;setTimeout(function(){var p=document.getElementById('fb-prompt');if(p)p.style.display='flex'},45000)}();function fbDismiss(){document.getElementById('fb-prompt').style.display='none';localStorage.setItem('fb_'+location.pathname,'1')}function fbYes(){var q=document.getElementById('fb-q'),m=document.getElementById('fb-msg'),y=document.getElementById('fb-yes'),n=document.getElementById('fb-no');q.style.display='none';y.style.display='none';n.style.display='none';m.innerHTML='Glad to hear it! Know someone who could use this? Share the link.';m.style.display='inline';setTimeout(fbDismiss,5000)}function fbNo(){var q=document.getElementById('fb-q'),m=document.getElementById('fb-msg'),y=document.getElementById('fb-yes'),n=document.getElementById('fb-no');q.style.display='none';y.style.display='none';n.style.display='none';m.innerHTML='Tell us what\'s missing \u2192 <a href="https://japantool.featurebase.app" target="_blank">Give feedback</a>';m.style.display='inline';setTimeout(fbDismiss,8000)}</script>
+<!-- feedback-prompt-end -->
 </body>
 </html>
