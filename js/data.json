@@ -72,19 +72,19 @@
       "id": "breakdown",
       "title": "Request Itemized Breakdown",
       "en": "Dear [Management Company],\n\nI recently received a move-out cost estimate of [amount] yen. Could you please provide an itemized breakdown showing each repair item, the cost, and the reason I am being charged?\n\nI would also like to know which items fall under normal wear and tear as defined by the MLIT Restoration Guidelines.\n\nThank you.",
-      "jp": "[Management Company] sama\n\nTaikyohiyou toshite [amount] en no omitsumori wo itadakimashita. Kaku shuuzen koumoku no uchiwake (koumoku-mei / kingaku / seikyuu riyuu) wo shomen de goteiji itadakemasu ka.\n\nMata, Kokudo Koutsuushou no genjou kaifuku guideline ni okeru tsuujou sonmou ni gaitou suru koumoku ni tsuite mo gokakunin wo onegai itashimasu."
+      "jp": "[管理会社名]様\n\n退去費用として[金額]円のお見積もりを頂きました。各修繕項目の内訳（項目名・金額・請求理由）を書面でご提示いただけますか。\n\nまた、国土交通省の原状回復ガイドラインにおける通常損耗に該当する項目についてもご確認をお願いいたします。"
     },
     {
       "id": "dispute",
       "title": "Dispute Specific Charge",
       "en": "Dear [Management Company],\n\nRegarding the move-out cost estimate dated [date], I would like to dispute the charge for [item] ([amount] yen).\n\nAccording to the MLIT Guidelines on Restoration to Original Condition, [specific rule - e.g., 'small nail holes from normal living are considered normal wear and the landlord's responsibility'].\n\nI request this charge be removed or adjusted accordingly.",
-      "jp": "[Management Company] sama\n\n[date] tsuki no taikyohiyou mitsumori no uchi, [item] ([amount] en) ni tsuite igi wo moushitatemasu.\n\nKokudo Koutsuushou 'Genjou Kaifuku wo Meguru Trouble to Guideline' ni yoreba, [specific rule] to sarete imasu.\n\nHon koumoku no torisage matawa tekisei na kingaku e no shuusei wo onegai itashimasu."
+      "jp": "[管理会社名]様\n\n[日付]付の退去費用見積もりのうち、[項目]（[金額]円）について異議を申し立てます。\n\n国土交通省「原状回復をめぐるトラブルとガイドライン」によれば、[該当ルール]とされています。\n\n本項目の取り下げまたは適正な金額への修正をお願いいたします。"
     },
     {
       "id": "escalate",
       "title": "Escalation to Consumer Affairs",
       "en": "Dear [Management Company],\n\nI have previously requested [adjustment/breakdown] regarding my move-out charges but have not received a satisfactory response.\n\nI am now consulting with the Consumer Affairs Center (188) regarding this matter. I would appreciate your prompt attention to resolve this before formal mediation becomes necessary.",
-      "jp": "[Management Company] sama\n\nTaikyohiyou ni tsuite [adjustment/breakdown] wo onegai shimashita ga, juubun na gokaitou wo itadakete orimasen.\n\nHonken ni tsuite Shouhi Seikatsu Center (188) ni soudan wo kaishi itashimashita. Seishiki na chouteini itaru mae ni kaiketsu itadakemasu you onegai moushiagemasu."
+      "jp": "[管理会社名]様\n\n退去費用について[調整/内訳開示]をお願いしましたが、十分なご回答を頂けておりません。\n\n本件について消費生活センター（188）に相談を開始いたしました。正式な調停に至る前に解決いただけますよう、お願い申し上げます。"
     }
   ],
   "helpContacts": [
