@@ -1,0 +1,66 @@
+name: CI/CD - Quality Check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  quality-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check HTML files exist
+        run: |
+          count=$(find . -name "*.html" | wc -l)
+          echo "Found $count HTML files"
+          if [ "$count" -eq 0 ]; then
+            echo "WARNING: No HTML files found"
+          fi
+
+      - name: Validate HTML structure
+        run: |
+          errors=0
+          for f in $(find . -name "*.html" -not -path "./.git/*"); do
+            # Check viewport meta
+            if ! grep -q 'viewport' "$f"; then
+              echo "WARN: Missing viewport meta in $f"
+              errors=$((errors+1))
+            fi
+            # Check title tag
+            if ! grep -q '<title>' "$f"; then
+              echo "WARN: Missing <title> in $f"
+              errors=$((errors+1))
+            fi
+            # Check for broken relative links
+            for link in $(grep -oP 'href="(?!http|#|mailto)([^"]+)"' "$f" | sed 's/href="//;s/"//'); do
+              dir=$(dirname "$f")
+              if [ ! -f "$dir/$link" ] && [ ! -f "$link" ]; then
+                echo "WARN: Broken link $link in $f"
+                errors=$((errors+1))
+              fi
+            done
+          done
+          echo "Total warnings: $errors"
+          if [ "$errors" -gt 10 ]; then
+            echo "::warning::Too many HTML issues ($errors)"
+          fi
+
+      - name: Check meta tags (SEO)
+        run: |
+          for f in $(find . -name "index.html" -not -path "./.git/*"); do
+            echo "--- $f ---"
+            grep -c 'og:title' "$f" > /dev/null && echo "  og:title: OK" || echo "  og:title: MISSING"
+            grep -c 'og:description' "$f" > /dev/null && echo "  og:description: OK" || echo "  og:description: MISSING"
+            grep -c 'description' "$f" > /dev/null && echo "  description: OK" || echo "  description: MISSING"
+          done
+
+      - name: Check file sizes
+        run: |
+          echo "Large files (>500KB):"
+          find . -not -path "./.git/*" -size +500k -exec ls -lh {} \;
+          echo "---"
+          echo "Total repo size:"
+          du -sh --exclude=.git .
