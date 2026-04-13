@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://humancronadmin.github.io/japan-housing-help/</loc>
-    <lastmod>2026-04-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://humancronadmin.github.io/japan-housing-help/articles/japan-housing-renting-foreigner-comparison.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://humancronadmin.github.io/japan-housing-help/index.html</loc>
+    <lastmod>2026-04-13</lastmod>
     <priority>1.0</priority>
   </url>
 </urlset>

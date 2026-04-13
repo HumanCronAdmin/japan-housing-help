@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Japan Housing Help</title>
+  <link href="https://humancronadmin.github.io/japan-housing-help/" rel="alternate"/>
+  <link href="https://humancronadmin.github.io/japan-housing-help/feed.xml" rel="self"/>
+  <id>https://humancronadmin.github.io/japan-housing-help/</id>
+  <updated>2026-04-13T10:04:33Z</updated>
+  <author><name>HumanCron</name></author>
+  <entry>
+    <title>Renting in Japan: Traditional vs. Modern Housing Paths</title>
+    <link href="https://humancronadmin.github.io/japan-housing-help/articles/japan-housing-renting-foreigner-comparison.html" rel="alternate"/>
+    <id>https://humancronadmin.github.io/japan-housing-help/articles/japan-housing-renting-foreigner-comparison.html</id>
+    <updated>2026-04-13T10:04:33Z</updated>
+    <summary>Navigating Japan</summary>
+  </entry>
+</feed>
